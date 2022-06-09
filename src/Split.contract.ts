@@ -4,14 +4,14 @@ interface TStorage {
     shares: TSet<TAddress>;
 }
 
-// const metadata = '{\"name\": \"token offers\",\"version\": \"1.0.0\",\"homepage\": \"https://offers.xtz.tools/\",\"authors\": [\"PureSpider <https://purespider.de/>\"],\"interfaces\": [\"TZIP-016\"]}';
+// const metadata = '{"name": "fund splitter","version": "1.0.0","homepage": "https://split.xtz.tools/","authors": ["PureSpider <https://purespider.de/>"],"interfaces": ["TZIP-016"]}';
 
 @Contract
 export class Split {
     storage: TStorage = {
         metadata: [
             ["", Sp.pack('tezos-storage:metadata')],
-            ["metadata", "0x00"]
+            ["metadata", "0x7b226e616d65223a202266756e642073706c6974746572222c2276657273696f6e223a2022312e302e30222c22686f6d6570616765223a202268747470733a2f2f73706c69742e78747a2e746f6f6c732f222c22617574686f7273223a205b2250757265537069646572203c68747470733a2f2f707572657370696465722e64652f3e225d2c22696e7465726661636573223a205b22545a49502d303136225d7d"]
         ],
         admins: ['tz1PqooZUtCQqP539PmMzUWHtaUX6EQtFY5S'],
         shares: [],
